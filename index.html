@@ -11,44 +11,48 @@
 
 <body>
     <div class="container">
-        <iframe>
+        <!-- <iframe> --> 
+            <div class="iframe">
             <form class="form">
-                <span class="formHeading">Can you please provide your personal details?</span>
+                <p class="formHeading">Can you please provide your personal details?</p>
 
                 <div class="formDetailDiv">
                     <label for="name">Name</label><br>
-                    <input type="text" id="name" name="name"><br>
+                    <input class="formInput" type="text" id="name" name="name" required><br>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="dob">Date of birth</label><br>
-                    <input type="date" id="dob" name="dob">
+                    <input class="formInput" type="date" id="dob" name="dob" required>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="mail">Email address</label><br>
-                    <input type="email" id="mail" name="mail">
+                    <input class="formInput" type="email" id="mail" name="mail" required>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="phone">Contact number</label><br>
-                    <input type="number" id="phone" name="phone">
+                    <input class="formInput" type="number" id="phone" name="phone" required>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="country">Country</label><br>
-                    <input type="text" id="country" name="country">
+                    <input class="formInput" type="text" id="country" name="country" required>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="state">State</label><br>
-                    <input type="text" id="state" name="state">
+                    <input class="formInput" type="text" id="state" name="state" required>
                 </div>
 
-                <button>Submit</button>
+                <button class="btn" id="submitBtn">Submit</button>
 
             </form>
-        </iframe>
+            </div>
+        <!-- </iframe> -->
+
+        
     </div>
 
     <script src="./app.js"></script>
