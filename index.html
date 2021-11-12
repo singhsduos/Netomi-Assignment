@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,50 @@
     <link rel="stylesheet" href="style.css">
     <title>HTML Form</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <iframe>
+            <form>
+                <span class="formHeading">Can you please provide your personal details?</span>
+
+                <div class="formDetailDiv">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name"><br>
+                </div>
+
+                <div class="formDetailDiv">
+                    <label for="dob">Date of birth</label><br>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="formDetailDiv">
+                    <label for="mail">Email address</label><br>
+                    <input type="email" id="mail" name="mail">
+                </div>
+
+                <div class="formDetailDiv">
+                    <label for="phone">Contact number</label><br>
+                    <input type="number" id="phone" name="phone">
+                </div>
+
+                <div class="formDetailDiv">
+                    <label for="country">Country</label><br>
+                    <input type="text" id="country" name="country">
+                </div>
+
+                <div class="formDetailDiv">
+                    <label for="state">State</label><br>
+                    <input type="text" id="state" name="state">
+                </div>
+
+                <button>Submit</button>
+
+            </form>
+        </iframe>
+    </div>
 
     <script src="./app.js"></script>
 </body>
+
 </html>
