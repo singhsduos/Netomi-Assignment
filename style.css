@@ -111,6 +111,11 @@ input[type="number"]:focus {
   padding: 0rem;
 }
 
+#country option,
+#state option{
+  text-align: center;
+}
+
 .btn {
   font-size: 0.8rem;
   font-weight: 600;

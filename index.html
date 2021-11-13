@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <!-- <iframe> -->
+        <!-- <iframe class="iframe"> -->
         <div class="iframe">
             <form class="form">
                 <p class="formHeading">Can you please provide your personal details?</p>
@@ -33,19 +33,21 @@
 
                 <div class="formDetailDiv">
                     <label for="phone">Contact number</label><br>
-                    <input class="formInput"  type="number" id="phone" name="phone" required>
+                    <input class="formInput" type="number" id="phone" name="phone" required>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="country">Country</label><br>
-                    <select class="formInput" id="country">
-                        <option>select country</option>
+                    <select class="formInput" id="country" onchange="selectCountry()">
+                        <option value="" selected="selected"> -- Select Country -- </option>
                     </select>
                 </div>
 
-                <div class="formDetailDiv">
+                <div id="stateDiv" class="formDetailDiv">
                     <label for="state">State</label><br>
-                    <span id="state-code"><input class="formInput" type="text" id="state"></span>
+                    <select class="formInput" id="state">
+                        <option value="" selected="selected"> -- Select Country First -- </option>
+                    </select>
                 </div>
 
                 <button class="btn" id="submitBtn">Submit</button>
@@ -53,10 +55,10 @@
             </form>
         </div>
 
-            <p id="errorMsg" class="errorText"></p>
+        <p id="errorMsg" class="errorText"></p>
+
+
         <!-- </iframe> -->
-
-
     </div>
 
     <script src="./app.js"></script>
