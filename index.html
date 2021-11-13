@@ -11,19 +11,19 @@
 
 <body>
     <div class="container">
-        <!-- <iframe> --> 
-            <div class="iframe">
+        <!-- <iframe> -->
+        <div class="iframe">
             <form class="form">
                 <p class="formHeading">Can you please provide your personal details?</p>
 
                 <div class="formDetailDiv">
-                    <label for="name">Name</label><br>
-                    <input class="formInput" type="text" id="name" name="name" required><br>
+                    <label for="name1">Name</label><br>
+                    <input class="formInput" type="text" id="name" name="name1" required><br>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="dob">Date of birth</label><br>
-                    <input class="formInput" type="date" id="dob" name="dob" required>
+                    <input class="formInput" type="date" id="dob" name="dob">
                 </div>
 
                 <div class="formDetailDiv">
@@ -33,26 +33,30 @@
 
                 <div class="formDetailDiv">
                     <label for="phone">Contact number</label><br>
-                    <input class="formInput" type="number" id="phone" name="phone" required>
+                    <input class="formInput"  type="number" id="phone" name="phone" required>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="country">Country</label><br>
-                    <input class="formInput" type="text" id="country" name="country" required>
+                    <select class="formInput" id="country">
+                        <option>select country</option>
+                    </select>
                 </div>
 
                 <div class="formDetailDiv">
                     <label for="state">State</label><br>
-                    <input class="formInput" type="text" id="state" name="state" required>
+                    <span id="state-code"><input class="formInput" type="text" id="state"></span>
                 </div>
 
                 <button class="btn" id="submitBtn">Submit</button>
 
             </form>
-            </div>
+        </div>
+
+            <p id="errorMsg" class="errorText"></p>
         <!-- </iframe> -->
 
-        
+
     </div>
 
     <script src="./app.js"></script>

@@ -16,13 +16,13 @@
 }
 
 :root {
-    --container-border: green;
-    --iFrame-border: red;
-    --white-shade: #fff;
-    --form-color: #e6eaf5;
-    --btn-darkShade: #3b916c;
-    --btn-lightShade: #64af76;
-    --input-border: rgb(206, 206, 250);
+  --container-border: green;
+  --iFrame-border: red;
+  --white-shade: #fff;
+  --form-color: #e6eaf5;
+  --btn-darkShade: #3b916c;
+  --btn-lightShade: #64af76;
+  --input-border: rgb(206, 206, 250);
 }
 
 body {
@@ -37,6 +37,22 @@ body {
 label {
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
 }
 
 /*
@@ -54,6 +70,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .iframe {
@@ -87,7 +104,11 @@ label {
   outline: none;
   font-size: 1rem;
   color: rgba(1, 1, 8, 0.863);
-  padding: 0.7rem 0.5rem;
+  padding: 0rem 0.5rem;
+}
+
+#country {
+  padding: 0rem;
 }
 
 .btn {
@@ -113,6 +134,13 @@ label {
 }
 .btn:active {
   top: 2px;
+}
+
+.errorText {
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  font-size: 0.9rem;
+  width: 80%;
+  text-align: center;
 }
 
 /*
