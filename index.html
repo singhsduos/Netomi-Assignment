@@ -11,57 +11,12 @@
 
 <body>
     <div class="container">
-        <!-- <iframe class="iframe"> -->
-        <div class="iframe">
-            <form class="form">
-                <p class="formHeading">Can you please provide your personal details?</p>
-
-                <div class="formDetailDiv">
-                    <label for="name1">Name</label><br>
-                    <input class="formInput" type="text" id="name" name="name1" required><br>
-                </div>
-
-                <div class="formDetailDiv">
-                    <label for="dob">Date of birth</label><br>
-                    <input class="formInput" type="date" id="dob" name="dob">
-                </div>
-
-                <div class="formDetailDiv">
-                    <label for="mail">Email address</label><br>
-                    <input class="formInput" type="email" id="mail" name="mail" required>
-                </div>
-
-                <div class="formDetailDiv">
-                    <label for="phone">Contact number</label><br>
-                    <input class="formInput" type="number" id="phone" name="phone" required>
-                </div>
-
-                <div class="formDetailDiv">
-                    <label for="country">Country</label><br>
-                    <select class="formInput" id="country" onchange="selectCountry()">
-                        <option value="" selected="selected"> -- Select Country -- </option>
-                    </select>
-                </div>
-
-                <div id="stateDiv" class="formDetailDiv">
-                    <label for="state">State</label><br>
-                    <select class="formInput" id="state">
-                        <option value="" selected="selected"> -- Select Country First -- </option>
-                    </select>
-                </div>
-
-                <button class="btn" id="submitBtn">Submit</button>
-
-            </form>
-        </div>
-
+        <iframe name="my-iframe" id="iFramed" class="iframe" src="./form.html">
+        </iframe>
         <p id="errorMsg" class="errorText"></p>
-
-
-        <!-- </iframe> -->
     </div>
-
     <script src="./app.js"></script>
 </body>
+
 
 </html>

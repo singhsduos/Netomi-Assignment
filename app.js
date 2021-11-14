@@ -1,18 +1,24 @@
+var iframedoc = document.getElementById('iFramed').contentWindow.document;
+// console.log(iframedoc);
+
+
 // All Elements from HTML Doc
-const username = document.getElementById('name'),
-    mail = document.getElementById('mail'),
-    phone = document.getElementById('phone'),
-    submitBtn = document.getElementById('submitBtn'),
+const username = iframedoc.getElementById('name'),
+    mail = iframedoc.getElementById('mail'),
+    phone = iframedoc.getElementById('phone'),
+    submitBtn = iframedoc.getElementById('submitBtn'),
     errorText = document.getElementById('errorMsg'),
-    country = document.getElementById('country'),
-    stateDiv = document.getElementById('stateDiv');
+    country = iframedoc.getElementById('country'),
+    stateDiv = iframedoc.getElementById('stateDiv'),
+    form = iframedoc.getElementsByTagName('form');
 let state = "";
+
 
 // Time Interval for reading state value for every new country selected
 setInterval(stateFunc, 100);
 
 function stateFunc() {
-    state = document.getElementById('state');
+    state = iframedoc.getElementById('state');
 }
 
 // validation for name
@@ -49,7 +55,7 @@ function validEmail() {
 }
 
 // validation for country
-function valiCountry() {
+function validCountry() {
     const error = "Country";
     const errReason = "is mandatory fields"
     if (country.value == "") {
@@ -77,15 +83,15 @@ function allValidField() {
 }
 
 //  event listener for submit button
-submitBtn.addEventListener('click', function (event) {
-    event.preventDefault();
-    allValidField();
-    nameLength();
-    validEmail();
-    phoneLength();
-    validState();
-    valiCountry();
-});
+// submitBtn.addEventListener('click', function (event) {
+    // event.preventDefault();
+//     allValidField();
+//     nameLength();
+//     validEmail();
+//     phoneLength();
+//     validState();
+//     validCountry();
+// });
 
 // API Fetching for countries and there state
 fetch('https://raw.githubusercontent.com/stefanbinder/countries-states/master/countries.json')
